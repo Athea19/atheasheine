@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Web Output #1</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 30px;
+        }
+
+        h2 {
+            margin-bottom: 20px;
+        }
+
+        input {
+            width: 150px;
+            padding: 7px;
+        }
+
+        button {
+            padding: 7px 12px;
+            margin-left: 5px;
+            cursor: pointer;
+        }
+
+        fieldset {
+            width: 650px;
+            min-height: 180px;
+            margin-top: 20px;
+        }
+
+        legend {
+            font-weight: bold;
+        }
+
+        .number-row {
+            display: flex;
+            align-items: center;
+            margin: 8px 0;
+        }
+
+        .number {
+            width: 60px;
+        }
+
+        .type {
+            width: 70px;
+            font-weight: bold;
+        }
+
+        .action-btn {
+            padding: 4px 10px;
+            margin-left: 5px;
+        }
+
+        #result {
+            margin-top: 15px;
+            border-top: 1px solid black;
+            padding-top: 10px;
+            line-height: 1.8;
+        }
+
+        .sort-area {
+            margin-top: 20px;
+        }
+
+        select {
+            padding: 6px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>Javascript Web Output #1</h2>
+
+    <label>Insert any Positive Numbers:</label>
+
+    <input type="number" id="numberInput" min="1">
+
+    <button onclick="insertNumber()">Insert</button>
+
+    <button onclick="clearEntry()">Clear Entry</button>
+
+
+    <fieldset>
+
+        <legend>Inserted Numbers</legend>
+
+        <div id="numberList"></div>
+
+        <div id="result"></div>
+
+    </fieldset>
+
+
+    <br>
+
+    <button onclick="clearItems()">Clear Items</button>
+
+    <button onclick="getTotal()">Get Total</button>
+
+    <button onclick="getHighestLowest()">
+        Identify Highest and Lowest Number
+    </button>
+
+
+    <div class="sort-area">
+
+        <label>Sort by:</label>
+
+        <select id="sortSelect" onchange="sortNumbers()">
+
+            <option value="">Please select</option>
+
+            <option value="ascending">Ascending</option>
+
+            <option value="descending">Descending</option>
+
+        </select>
+
+    </div>
+
+
+    <!-- JavaScript file -->
+    <script src="script.js"></script>
+
+</body>
+</html>
